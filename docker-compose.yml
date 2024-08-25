@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+    ubuntu_setup:
+        build: .
+        container_name: ubuntu_setup_container
+        volumes:
+            - ./scripts:/usr/local/bin/scripts
+        command: ["/usr/local/bin/scripts/setup.sh"]
